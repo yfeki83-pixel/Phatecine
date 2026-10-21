@@ -61,3 +61,11 @@ Ce projet permet de mettre en pratique HTML, CSS et JavaScript, d'utiliser une A
 ## Auteur
 
 **Yessin Feki** — Projet étudiant, 2026.
+
+
+## Dépôt GitHub
+
+Le projet Phatecine est disponible sur GitHub.
+
+Lien du dépôt :
+https://github.com/yfeki83-pixel/Phatecine
