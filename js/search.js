@@ -79,7 +79,7 @@ input.addEventListener('input', () => {
     more.hidden = true;
 
     if (query.length < 3) {
-        status.textContent = 'Écris au moins 3 lettres pour commencer.';
+        status.textContent = 'Saisissez au moins 3 lettres pour rechercher un film';
         return;
     }
 
