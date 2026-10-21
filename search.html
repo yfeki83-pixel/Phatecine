@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recherche — Phatecine</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/search.js"></script>
+</head>
+
+<body>
+
+
+    <header class="top">
+        <a class="brand" href="index.html">
+            🎬 Phate<span>cine</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="search.html">Recherche</a>
+            <a href="contacte.html">contacte</a>
+        </nav>
+    </header>
+
+    <main>
+
+      
+        <section class="section">
+
+            <p class="eyebrow">
+                DÉCOUVREZ VOTRE PROCHAIN FILM
+            </p>
+
+            <h1>Rechercher un film</h1>
+
+           
+            <label for="search">Nom du film</label>
+
+            <input
+                id="search"
+                type="search"
+                placeholder="Exemple : Batman, Dune, Avatar…"
+                autocomplete="off"
+            >
+
+           
+            <p
+                class="status"
+                id="status"
+                role="status"
+                aria-live="polite"
+            >
+                Écris au moins 3 lettres pour commencer.
+            </p>
+
+           
+            <div class="grid" id="films"></div>
+
+          
+            <div class="center">
+                <button id="more" hidden>
+                    Charger plus de résultats
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+   
+    <footer>
+        Phatecine | tik tok | Discord 
+    </footer>
+
+</body>
+</html>

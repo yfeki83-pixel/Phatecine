@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>🗒️ Contact 🖊️</title>
+</head>
+
+<body>
+
+    <section id="contact" class="contact">
+
+        <h2>🗒️ Contact 🖊️</h2>
+
+        <p>
+            Vous avez une question concernant notre site ?
+            N'hésitez pas à nous contacter.
+        </p>
+
+        <p>
+            🐾L'équipe 🎥 Phatecine:
+            
+            Est à votre disposition pour répondre à vos questions
+            et vous accompagner. Remplissez le formulaire ci-dessous et nous vous
+            répondrons dans les meilleurs délais.
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="ec633b80-58e0-4d1d-a26e-06fbfbdecb39">
+
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Votre message :</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <label class="consent">
+                <input type="checkbox" name="consent" value="Oui" required>
+                J'accepte d'être recontacté
+            </label>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+
+    </section>
+
+    <section>
+        <a href="index.html" class="bouton">🎥Accueil</a>
+    </section>
+
+</body>
+</html>
