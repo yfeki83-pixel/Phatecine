@@ -1,3 +1,4 @@
+
 import { omdb } from './api.js';
 import { addCards } from './ui.js';
 
@@ -41,12 +42,20 @@ async function load(append = false) {
         const results = data.Search || [];
         total = Number(data.totalResults || 0);
 
-        addCards(films, results, append);
+        // Garder uniquement les films depuis 2020
+        const filmsRecents = results.filter(movie => {
+            const annee = parseInt(movie.Year, 10);
+            return annee >= 2020;
+        });
 
-        status.textContent = total
-            ? total + ' résultat(s) trouvé(s)'
-            : 'Aucun film trouvé.';
+        // Afficher les films récents
+        addCards(films, filmsRecents, append);
 
+        status.textContent = films.children.length
+            ? films.children.length + ' film(s) affiché(s) depuis 2020'
+            : 'Aucun film récent affiché.';
+
+        // Bouton Charger plus
         more.hidden = page * 10 >= total;
 
     } catch (error) {
@@ -84,11 +93,10 @@ input.addEventListener('input', () => {
     timer = setTimeout(() => load(false), 350);
 });
 
-// Bouton Voir plus
+// Bouton Charger plus
 more.addEventListener('click', () => {
     if (loading) return;
 
     page++;
     load(true);
 });
-

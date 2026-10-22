@@ -1,6 +1,11 @@
 // Créer une carte de film
 export function card(movie, summary = '') {
 
+    // Ne pas afficher les films sans affiche
+    if (!movie.Poster || movie.Poster === 'N/A') {
+        return null;
+    }
+
     const article = document.createElement('article');
     article.className = 'card';
 
@@ -11,20 +16,17 @@ export function card(movie, summary = '') {
     const poster = document.createElement('div');
     poster.className = 'poster';
 
-    if (movie.Poster && movie.Poster !== 'N/A') {
-        const img = document.createElement('img');
-        img.src = movie.Poster;
-        img.alt = 'Affiche de ' + movie.Title;
-        img.loading = 'lazy';
+    const img = document.createElement('img');
+    img.src = movie.Poster;
+    img.alt = 'Affiche de ' + movie.Title;
+    img.loading = 'lazy';
 
-        img.onerror = () => {
-            poster.textContent = 'Affiche indisponible';
-        };
+    // Supprimer la carte si l'image ne charge pas
+    img.onerror = () => {
+        article.remove();
+    };
 
-        poster.append(img);
-    } else {
-        poster.textContent = 'Affiche indisponible';
-    }
+    poster.append(img);
 
     // Informations du film
     const info = document.createElement('div');
@@ -67,7 +69,11 @@ export function addCards(container, items, append = false) {
     }
 
     for (const movie of items) {
-        container.append(card(movie, movie.Plot));
+        const filmCard = card(movie, movie.Plot);
+
+        if (filmCard) {
+            container.append(filmCard);
+        }
     }
 }
 
