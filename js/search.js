@@ -1,5 +1,3 @@
-
-
 import { omdb } from './api.js';
 import { addCards } from './ui.js';
 

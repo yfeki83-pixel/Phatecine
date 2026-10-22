@@ -1,4 +1,3 @@
-
 import { omdb } from './api.js';
 
 const target = document.querySelector('#film');
@@ -71,9 +70,7 @@ async function start() {
                 ajouter(rating.Source + ' : ' + rating.Value);
             }
         }
-
-        // Date DVD
-        ajouter('Sortie DVD : ' + (movie.DVD || 'Non disponible'));
+        
 
         // Afficher sur le site
         section.append(poster, info);

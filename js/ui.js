@@ -1,4 +1,3 @@
-
 // Créer une carte de film
 export function card(movie, summary = '') {
 
