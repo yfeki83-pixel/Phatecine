@@ -14,7 +14,7 @@ const featured = [
     'The Wild Robot'
 ];
 
-// Films supplémentaires
+// Films supplémentaires quand tu charge plus (film 2024)
 const additional = [
     'Wicked',
     'Gladiator II',
